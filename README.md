@@ -6,6 +6,8 @@ Built for people who can *build* with AI but haven't yet *sold* with it. You don
 
 There are 51 skills across six packs. Install the whole thing or just the pack you need.
 
+> **Brand new to Claude Code?** Start with [freeskills](https://github.com/duncan-buildroom/freeskills) instead — 50 skills that need zero setup, built to teach you the tool and get your first things live. Come back here when you want the heavier machinery: content pipelines, video and thumbnail generation, carousel rendering, and publishing automations. Some skills appear in both.
+
 ---
 
 ## Install (the one-command way)
