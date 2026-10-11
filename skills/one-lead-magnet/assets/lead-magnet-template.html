@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<style>
+/* ---- BRAND: change only these six values. Defaults are a clean neutral look. ---- */
+:root{
+  --accent:#1F5FBF;        /* main brand color: cover, headings, boxes */
+  --accent-tint:#EEF3FB;   /* light version of the accent for boxes */
+  --ink:#1B1F2A;           /* body text */
+  --mute:#667085;          /* captions, footer */
+  --font-body:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  --font-head:-apple-system,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+/* If the brand uses a web font, add one @import line here, e.g.
+   @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap');
+   then set --font-head / --font-body above. It needs internet when rendering. */
+
+@page{size:8.5in 11in;margin:.8in .8in .9in;
+  @bottom-left{content:"{{FOOTER_TITLE}}";font:8.5pt var(--font-body);color:var(--mute)}
+  @bottom-right{content:counter(page);font:600 9pt var(--font-body);color:var(--accent)}}
+@page :first{margin:0;@bottom-left{content:none}@bottom-right{content:none}}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#fff}
+body{font-family:var(--font-body);color:var(--ink);font-size:12pt;line-height:1.5;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3{font-family:var(--font-head);color:var(--accent);line-height:1.15;margin:0}
+h2{font-size:23pt;margin-bottom:.14in;letter-spacing:-.01em}
+h3{font-size:14pt;margin:.22in 0 .06in}
+p{margin:0 0 .12in}
+ul,ol{margin:0 0 .14in;padding-left:.28in} li{margin-bottom:.05in}
+
+/* Cover: always the first page */
+.cover{height:11in;width:8.5in;background:var(--accent);color:#fff;padding:1in .9in;
+  display:flex;flex-direction:column;justify-content:space-between;break-after:page}
+.cover h1{color:#fff;font-size:42pt;letter-spacing:-.02em;margin:0 0 .25in}
+.cover .sub{font-size:15pt;line-height:1.4;max-width:6in;opacity:.95}
+.cover .kicker{font-size:10pt;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.cover .by{font-size:12pt;line-height:1.5}
+
+/* Content */
+.section{break-before:page}
+.section.flow{break-before:auto;margin-top:.35in}
+.kicker-line{font-size:9.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:.08in}
+.do{background:var(--accent-tint);border-left:4px solid var(--accent);border-radius:6px;
+  padding:.14in .2in;margin:.2in 0;break-inside:avoid}
+.do b.label{display:block;font-size:9.5pt;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.04in}
+.proof{border-left:3px solid var(--rule,#C9CFDB);padding:.02in 0 .02in .2in;margin:.2in 0;font-style:italic;break-inside:avoid}
+.proof small{display:block;font-style:normal;color:var(--mute);font-size:9.5pt;margin-top:.04in}
+.note{font-size:9.5pt;color:var(--mute);border-top:1px solid #D9DEE8;padding-top:.1in;margin-top:.3in}
+.check li{list-style:none;position:relative;padding-left:.32in}
+.check li::before{content:"";position:absolute;left:0;top:.2em;width:.16in;height:.16in;border:1.5px solid var(--accent);border-radius:3px}
+table{width:100%;border-collapse:collapse;margin:.14in 0;break-inside:avoid}
+th{background:var(--accent);color:#fff;text-align:left;font-size:10pt;padding:.07in .1in}
+td{border-bottom:1px solid #D9DEE8;padding:.08in .1in;font-size:11pt;vertical-align:top}
+.lines{height:.34in;border-bottom:1px solid #B9C0CF}
+.cta{background:var(--accent);color:#fff;border-radius:10px;padding:.25in .3in;margin:.3in 0;break-inside:avoid}
+.cta h3{color:#fff;margin-top:0}
+.cta a{color:#fff;font-weight:700}
+</style>
+</head>
+<body>
+
+<!-- COVER: fill the three placeholders. Keep the name of the result in the title. -->
+<div class="cover">
+  <div class="kicker">{{BUSINESS}}</div>
+  <div>
+    <h1>{{TITLE}}</h1>
+    <div class="sub">{{SUBTITLE}}</div>
+  </div>
+  <div class="by">By {{AUTHOR}}<br>{{BUSINESS}}</div>
+</div>
+
+<!-- BODY START. Short sections can share a page: class="section flow". Replace the sample sections below with the real, approved sections.
+     Component cheat sheet (copy any block, delete what you do not use):
+     .section = new page | .do = "Your one thing" box | .proof = real quote or story
+     ul.check = tick-box list | table = scorecards | .lines = write-in line | .cta = last page -->
+
+<div class="section">
+  <div class="kicker-line">Start here</div>
+  <h2>Section title that names the result</h2>
+  <p>Plain, short paragraphs in the owner's voice.</p>
+  <div class="proof">"A real line from a real customer, used with permission."<small>First name, what changed</small></div>
+  <h3>A smaller heading</h3>
+  <ul class="check"><li>A thing the reader checks off</li><li>Another one</li></ul>
+  <table><tr><th>Question</th><th>Yes</th><th>Not yet</th></tr>
+    <tr><td>A self-check question</td><td></td><td></td></tr></table>
+  <div class="do"><b class="label">Your one thing</b>The single action that ends this section.</div>
+  <div class="lines"></div><div class="lines"></div>
+</div>
+
+<div class="section">
+  <div class="kicker-line">Next step</div>
+  <h2>Last page: where to go from here</h2>
+  <p>One sentence that connects what they just did to the offer.</p>
+  <div class="cta"><h3>{{NEXT_STEP}}</h3><a href="{{LINK}}">{{LINK}}</a></div>
+  <!-- Health, legal or money niches: keep this line, and put the same line on the first content page. -->
+  <div class="note">{{DISCLAIMER}}</div>
+</div>
+
+<!-- BODY END -->
+</body>
+</html>
