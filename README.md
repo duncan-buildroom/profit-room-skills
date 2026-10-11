@@ -4,7 +4,7 @@
 
 Built for people who can *build* with AI but haven't yet *sold* with it. You don't need to code. You run a skill in plain English, answer a couple of questions, and get a real, usable result — an offer you can pitch, an outreach list, a week of posts, a thumbnail, a landing page.
 
-There are 51 skills across six packs. Install the whole thing or just the pack you need.
+There are 52 skills across six packs. Install the whole thing or just the pack you need.
 
 > **Brand new to Claude Code?** Start with [freeskills](https://github.com/duncan-buildroom/freeskills) instead — 50 skills that need zero setup, built to teach you the tool and get your first things live. Come back here when you want the heavier machinery: content pipelines, video and thumbnail generation, carousel rendering, and publishing automations. Some skills appear in both.
 
@@ -89,6 +89,7 @@ The heart of the pack. Turn "I built something" into "someone paid me."
 | `daily-digest` | A daily digest of what's new in your niche |
 | `carousel-creator` | Branded Instagram carousels from a topic or transcript |
 | `lead-magnet` | Build a free lead magnet + the posts to promote it |
+| `one-lead-magnet` | Walk through building ONE high-value lead magnet: a finished PDF plus the post, DM, five emails and weekly scorecard |
 | `digital-guide-builder` | Turn your expertise into a finished, sellable guide |
 | `content-prompt` | Get one sharp question to riff on for a short video |
 | `hooks` | Generate scroll-stopping hooks with a proven framework |

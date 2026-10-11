@@ -1,0 +1,8 @@
+{
+  "skill_name": "one-lead-magnet",
+  "evals": [
+    {"id": 1, "prompt": "I want to build a lead magnet for my business. Walk me through it.", "expected_output": "Reads the brand profile, offers to read notes or reviews, then asks one question at a time with an example."},
+    {"id": 2, "prompt": "Build me a free guide people can get by commenting a word on Instagram.", "expected_output": "Walks the 10 exercises, builds the PDF and writes launch-kit.md with the comment-keyword post, DM and five emails."},
+    {"id": 3, "prompt": "I'm a physical therapist and I need a freebie to get more signups.", "expected_output": "Adds a general-information-not-advice line to the first and last page and keeps health details out of DMs and emails."}
+  ]
+}
